@@ -10,7 +10,7 @@ public class holiday_check{
 
  public holiday_check(boolean check){
     Scanner input = new Scanner(System.in);
-    
+    System.out.println("\n"+"Welcome to Todo list program"+"\n");
     int get_holiday = time_holiday.day;
     this.holidaycheck = check;
 
@@ -24,7 +24,7 @@ public class holiday_check{
             
             int choice;
 
-            System.out.println("Please select your choice");
+            System.out.println("Please select your choice"+"\n");
             System.out.println("1:Enter Holiday if you have some then exit the program");
             System.out.println("2:Exit and Start Program");  
             choice = input.nextInt();
@@ -34,17 +34,22 @@ public class holiday_check{
                 list_of_var.add_holiday();
                 if(list_of_var.holiday.contains("No") || list_of_var.holiday.contains("no") || list_of_var.holiday.contains("NO")){
                     holidaycheck = false;
-                }else{
+                    break;
+                }else if(list_of_var.holiday.contains("Yes") || list_of_var.holiday.contains("yes") || list_of_var.holiday.contains("YES")){
                    holidaycheck = true; 
+                   break;
+                }else{
+                    System.out.println("invalid var"+"\n");
+
                 }
-                break;
+                
             }else if(choice == 2){
-                System.out.println("you have exit program");
+                System.out.println("you have exit program"+"\n");
                 break;
             }else if(list_of_var.holiday.size() !=0){
                 break;
             }else{
-                System.out.println("Invalid value");
+                System.out.println("Invalid value"+"\n");
             }
         }
         }
@@ -53,7 +58,7 @@ public class holiday_check{
         holidaycheck = false;
     }
     
-    // System.out.println("holiday_check = "+holidaycheck);
+    // System.out.println("holiday_check = "+holidaycheck); //check value holiday_check boolean
     input.close();
 }
 

@@ -11,7 +11,7 @@ public class Assembly {
         
     public Assembly(){
         
-        System.out.println("Holiday checking.....");
+        System.out.println("\n"+"Holiday checking....."+"\n");
 
         if(check_busy == true && check_holiday == false){
             System.out.println("Sad you didnt have a holiday.");
