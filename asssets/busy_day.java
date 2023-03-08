@@ -16,6 +16,6 @@ public class busy_day{
             
             busy_check = true;
         }
-        
+       // System.out.println("busy_check :"+busy_check); //check value busy_check boolean
     }
 }
